@@ -35,3 +35,16 @@ class OrderStatuses:
     PAID = 1
     ERROR = 8
     CANCELED = 9
+
+
+class Currencies:
+    RUB = 'RUB'
+    USD = 'USD'
+    EUR = 'EUR'
+    UAH = 'UAH'
+    KZT = 'KZT'
+
+
+class Languages:
+    RU = 'ru'
+    EN = 'en'
