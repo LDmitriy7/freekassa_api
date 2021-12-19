@@ -23,7 +23,7 @@ class Merchant(FreekassaApi):
         payload = {k: v for k, v in params.items() if v is not None}
         return self.INVOICE_BASE_URL.format(query=urlencode(payload))
 
-    def balance(self) -> models.Balance:
+    def get_balance(self) -> models.Balance:
         resp = self.request('balance')
         currencies_values = {i['currency']: i.get('value') for i in resp['balance']}
         return models.Balance(**currencies_values)
